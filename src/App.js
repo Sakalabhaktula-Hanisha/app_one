@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+import React from "react";
+import Card from "./components/Card"
+function App(){
+
+function refresh(){
+  window.location.reload(false);
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <h1>React App with Images and Text</h1>
+      <button className="refresh" onClick={refresh}>Refresh</button>
+      <div className="cardContainer" id="top">
+        <Card/>
+      </div>
     </div>
   );
 }
 
 export default App;
+ 
